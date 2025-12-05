@@ -1,0 +1,36 @@
+#include<stdio.h>
+  int main(){
+      int a;
+      scanf("%d",&a);
+      printf("tank level =%d\n",a);
+      
+      
+      if(a<0||a>100)
+      {
+          printf("invalid\n");
+      }
+      
+      else if (a<10)
+      {
+          printf("Aleart and fill\n");
+          printf("recommendation=starting motor\n");
+      }
+      else if(a<30)
+      {
+          printf("Low\n");
+          printf("motor start filling\n");
+      }
+      else if(a>30&&a<70)
+      {
+          printf("normal\n");
+          printf("motor normally running\n");
+      }
+      else if(a>70)
+      {
+          printf("high");
+          printf("motor stop\n");
+      }
+      return 0;
+  }
+  
+  
