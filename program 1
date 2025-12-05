@@ -1,0 +1,64 @@
+#include <stdio.h>
+
+int main() {
+	int m[6], i;
+	int total = 0;
+	float percentage;
+
+	int count90 = 0, count75 = 0, count50 = 0, countFail = 0;
+
+
+	for(i = 0; i < 6; i++) {
+		scanf("%d", &m[i]);
+		total += m[i];
+
+		if(m[i] >= 90)
+		{
+			count90++;
+		}
+		else if(m[i] >= 75)
+		{
+			count75++;
+		}
+		else if(m[i] >= 50)
+		{
+			count50++;
+		}
+		else
+		{
+			countFail++;
+		}
+	}
+
+	percentage = total / 6;
+
+
+	printf(" Student Report\n");
+	printf("Total: %d\n", total);
+	printf("Percentage: %.2f%%\n", percentage);
+
+	if(percentage >= 90) {
+		printf(" Excellent\n");
+	}
+	else if(percentage >= 75) {
+		printf(" Very Good\n");
+	}
+	else if(percentage >= 60) {
+		printf(" Good\n");
+	}
+	else if(percentage >= 50) {
+		printf(" Average\n");
+	}
+	else {
+		printf(" Needs Improvement\n");
+	}
+
+
+	printf("\nSubject-wise Count:\n");
+	printf(">= 90 : %d subjects\n", count90);
+	printf("75-90 : %d subjects\n", count75);
+	printf("50-75 : %d subjects\n", count50);
+	printf("< 50  : %d subjects\n", countFail);
+
+	return 0;
+}
