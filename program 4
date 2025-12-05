@@ -1,0 +1,20 @@
+
+#include <stdio.h>
+
+int main() 
+ {
+    int t=0,average,min=1000,max=-1000;
+    int temp[24];
+    for(int i=1;i<=24;i++){
+         printf("enter the temperature at hour %d:",i);
+         scanf("%d",&temp[i]);
+         t=t+temp[i];
+         if(temp[i]<min) min=temp[i];
+         if(temp[i]>max) max=temp[i];
+     }
+    average=t/24;
+    if(average>24) printf("the weather is hot\n");
+    else if(average>20 && average<=24) printf("the weather is normal\n");
+    else printf("the weather is cold\n");
+    printf("With average temp:%d\nmin temp:%d\nmax temp:%d",average,min,max);
+ }
