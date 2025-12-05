@@ -1,0 +1,36 @@
+
+#include <stdio.h>
+
+int main() 
+ {
+    int a,total,widthdraw,deposit;
+    printf("Enter the total amount in your account:");
+    scanf("%d",&total);
+    printf("Press 1 for widthdraw\nPress 2 for deposit  \n");
+    scanf("%d",&a);
+    switch(a){
+    case 1:
+        printf("Enter the amount for widthdraw:");
+        scanf("%d",&widthdraw);
+        if(widthdraw<=total)
+        {
+        total=total-widthdraw;
+        }
+        else 
+        {
+        printf("insufficent balance\n");
+        break;
+        }
+        
+        
+    case 2:
+        printf("enter the amount:");
+        scanf("%d",&deposit);
+        total=total+deposit;
+        break;
+        
+    }
+   printf("\n\n-\nAccount balance:%d\nWithdraw amount is:%d\nDeposited amount is:%d\n",total,widthdraw,deposit);
+   
+   return 0;
+ }
